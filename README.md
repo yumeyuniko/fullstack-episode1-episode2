@@ -73,4 +73,4 @@ _･゜ﾟ･_:.｡..｡.:*･'(*ﾟ ▽ ﾟ*)'･*:.｡. .｡.:_･゜ﾟ･_
 
 #### Thanks a lot I really like it!
 
-This project was [Full Stack Web Development Course](hhttps://www.youtube.com/playlist?list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL).
+This project was [Full Stack Web Development Course](https://www.youtube.com/playlist?list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL).
