@@ -1,26 +1,26 @@
-import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import axios from "axios";
-
+import React from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 function CreatePost() {
+  let history = useHistory();
   const initialValues = {
-    title: "",
-    postText: "",
-    username: "",
+    title: '',
+    postText: '',
+    username: '',
   };
 
   const validationSchema = Yup.object().shape({
-    title: Yup.string().required("タイトルを入れてください"),
-    postText: Yup.string().required("内容をいれてください"),
+    title: Yup.string().required('タイトルを入れてください'),
+    postText: Yup.string().required('内容をいれてください'),
     username: Yup.string().min(3).max(15).required(),
   });
 
-
   const onSubmit = (data) => {
-    axios.post("http://localhost:3001/posts", data).then((response) => {
-      console.log("It WORKED");
+    axios.post('http://localhost:3001/posts', data).then((response) => {
+      history.push('/');
     });
   };
 
@@ -31,7 +31,6 @@ function CreatePost() {
         onSubmit={onSubmit}
         validationSchema={validationSchema}
       >
-        
         <Form className="formContainer">
           <label>Title:</label>
           <ErrorMessage name="title" component="span" />
